@@ -1,0 +1,29 @@
+{
+    "button":"اضافة صفقة جديدة",
+    "popup":{
+        "header":"انشاء صفقة جديدة",
+        "buyOrRent":"شراء / تأجير شقة سكنية في منطقة التجمع الأول",
+        "selectClient":"حدد العميل",
+        "searchClient":"يرجي البحث عن العميل لاختياره",
+        "searchPlaceholder":"إبحث عن عميل : مثال اسم العميل , رقم الهاتف",
+        "dealCost":"سعر الصفقة",
+        "dealCostParagraph":"سعر الصفقة هو المبلغ المدفوع شامل الضرائب",
+        "dealProbability":"إحتمالية نجاح الصفقة",
+        "tags":"العلامات",
+        "newDel":"صفقة جديدة",
+        "transactionResponsible":"مسؤولة الصفقة",
+        "personName":"محمد غريب",
+        "source":"المصدر",
+        "project":"المشروع",
+        "additionalInfo":"معلومات إضافية",
+        "signing":"توقيع العقد",
+        "addDeal":"إضافة الصفقة",
+        "instagram":"انستجرام",
+        "facebook":"فيس بوك",
+        "victoria":"فيكتوريا دي ميرو",
+        "products":"المنتجات",
+        "noProducts": "لا يوجد منتجات",
+        "productsParagraph":"يرجي إضافة منتجات وإدارتها للصفقة الحالية",
+        "addProduct": "اضافة منتج"
+    }
+}

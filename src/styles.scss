@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./styles/index" as *;
+
+body {
+  background-color: cadetblue;
+  font-family: var(--font-family) !important;
+}
+
+html[lang="ar"] body {
+  --font-family: "new-sans-arabic", sans-serif;
+  .clipPathStyle {
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  }
+}
+
+html[lang="en"] body {
+  --font-family: "Inter", sans-serif;
+  .clipPathStyle {
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  }
+}
+
+html[lang="ar"] .lang-btn {
+  font-family: "Inter", sans-serif !important;
+}
+
+html[lang="en"] .lang-btn {
+  font-family: "new-sans-arabic", sans-serif !important;
+}
+.arabic-font {
+  font-family: "new-sans-arabic", sans-serif !important;
+}

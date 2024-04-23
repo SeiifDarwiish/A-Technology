@@ -1,0 +1,30 @@
+
+{
+    "button":"add new deal",
+    "popup":{
+        "header":"Create a new deal",
+        "buyOrRent":"Buying/renting an apartment in First Settlement",
+        "selectClient":"Select Cliet",
+        "searchClient":"Please search for the customer to choose",
+        "searchPlaceholder":"Search for a client:name , phone number",
+        "dealCost":"Transaction price",
+        "dealCostParagraph":"Is the amount paid including taxes",
+        "dealProbability":"Probability of the deal success",
+        "tags":"Tags",
+        "newDel":"New Deal",
+        "transactionResponsible":"Transaction Responsible",
+        "personName":"Mohamed Ghareb",
+        "source":"Source",
+        "project":"Project",
+        "additionalInfo":"Additional Information",
+        "signing":"Signing contract",
+        "addDeal":"Add Deal",
+        "instagram":"Instagram",
+        "facebook":"Facebook",
+        "victoria":"Victoria de Mero",
+        "products":"Products",
+        "noProducts": "No products Founded",
+        "productsParagraph":"Please add and manage products to the existing deal",
+        "addProduct": "Add Product"
+    }
+}

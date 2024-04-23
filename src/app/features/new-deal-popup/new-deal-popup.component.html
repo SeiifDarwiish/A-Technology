@@ -1,0 +1,237 @@
+<header class="flex justify-between mt-3 px-6">
+  <div class="flex items-center justify-end gap-x-3">
+    <img
+      class="w-6 h-fit p-1 bg-[#0771DE] rounded-lg"
+      src="assets/icons/note-2.png"
+      alt=""
+    />
+    <p class="text-[#1C1C28] text-base font-semibold">{{ "popup.header" | translate }}</p>
+  </div>
+  <i
+    class="pi pi-times cursor-pointer p-2 bg-[#F4F4F4] rounded-md"
+    (click)="__dialogRef.close()"
+  ></i>
+</header>
+<section class="bg-[#FAFAFA] space-y-6 my-4 py-5 w-full px-6">
+  <div class="flex gap-x-6 items-center">
+    <p
+      class="bg-white border border-[#83899F] border-opacity-40 text-[#1C1C28] text-sm font-semibold py-2 px-4 rounded-md w-2/3"
+    >
+      {{ "popup.buyOrRent" | translate }}
+    </p>
+    <img
+      src="assets/icons/paper.png"
+      class="bg-white border border-[#83899F] border-opacity-40 p-[11px] rounded-md"
+      alt=""
+    />
+  </div>
+  <div class="flex gap-x-6">
+    <section
+      class="w-1/2 bg-[#F6FAFF] border border-[#0771DE] border-dashed rounded-lg p-3 flex flex-col justify-between"
+    >
+      <div class="flex gap-x-4 mb-3 items-center">
+        <img
+          src="assets/icons/profile.png"
+          class="bg-white rounded-md w-6 p-[6px]"
+          alt=""
+        />
+        <article class="space-y-1">
+          <p class="text-[#1C1C28] text-sm font-medium">{{ "popup.selectClient" | translate }}</p>
+          <p class="text-[#83899F] text-xs">
+            {{ "popup.searchClient" | translate }}
+          </p>
+        </article>
+      </div>
+      <p-iconField iconPosition="right">
+        <!-- <i class="pi pi-search"></i> -->
+        <p-inputIcon styleClass="pi pi-search" />
+        <input
+          class="p-2 w-full outline-none placeholder:text-xs placeholder:text-[#83899F] items-end"
+          type="text"
+          placeholder="{{ 'popup.searchPlaceholder' | translate }}"
+        />
+      </p-iconField>
+    </section>
+    <section
+      class="w-1/2 bg-white border border-[#83899F4D] rounded-lg p-3 flex flex-col justify-between"
+    >
+      <div class="flex gap-x-4 mb-3 items-center">
+        <img
+          src="assets/icons/wallet-minus.png"
+          class="bg-[#E8F2FF] rounded-md w-5 p-1 h-fit"
+          alt=""
+        />
+        <article class="space-y-1">
+          <p class="text-[#1C1C28] text-sm font-medium">{{ "popup.dealCost" | translate }}</p>
+          <p class="text-[#83899F] text-xs">
+            {{ "popup.dealCostParagraph" | translate }}
+          </p>
+        </article>
+      </div>
+      <input
+        class="bg-[#FAFAFA]  border border-[#83899F4D] p-2 w-full outline-none rounded-lg text-center"
+        type="text"
+        placeholder="$50,000"
+      />
+    </section>
+  </div>
+  <section
+    class="bg-white items-center gap-x-6 p-3 border border-[#83899F4D] flex justify-between rounded-lg"
+  >
+    <div class="flex w-1/3 gap-x-3 items-center">
+      <img
+        src="assets/icons/questionMark.png"
+        class="bg-white rounded-md w-8 p-1 h-fit"
+        alt=""
+      />
+      <p class="text-[#1C1C28] text-sm font-medium">{{ "popup.dealProbability" | translate }}</p>
+      <img
+        src="assets/icons/file-edit2.png"
+        class="bg-white rounded-md w-8 p-2 border border-[#83899F4D] h-fit"
+        alt=""
+      />
+    </div>
+    <div class="card flex justify-content-center w-2/3">
+      <div class="w-full space-y-3">
+        <input
+          type="text"
+          pInputText
+          [(ngModel)]="value"
+          class="w-full text-center"
+        />
+        <p-slider
+          [(ngModel)]="value"
+          styleClass="w-full mt-3 h-[1rem] clipPathStyle"
+        ></p-slider>
+        <article class="w-full flex justify-between text-[#83899F] text-xs">
+          <span>0%</span>
+          <span>10%</span>
+          <span>20%</span>
+          <span>30%</span>
+          <span>40%</span>
+          <span>50%</span>
+          <span>60%</span>
+          <span>70%</span>
+          <span>80%</span>
+          <span>90%</span>
+          <span>100%</span>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="xl:flex xl:justify-between gap-x-3 space-y-3 xl:space-y-0">
+    <div class="flex flex-col justify-between min-w-fit xl:w-1/3">
+      <label class="text-[#1C1C28] text-sm font-medium">{{ "popup.transactionResponsible" | translate }}</label>
+      <section
+        class="bg-white items-center gap-x-6 p-3 border border-[#83899F4D] flex justify-between rounded-lg mt-2"
+      >
+        <div class="flex gap-x-2 items-center">
+          <img
+            src="assets/icons/user.png"
+            class="bg-white rounded-md p-1 h-fit"
+            alt=""
+          />
+          <p class="text-[#1C1C28] text-sm font-medium">{{ "popup.personName" | translate }}</p>
+        </div>
+        <img
+          src="assets/icons/userBlock.png"
+          class="bg-white rounded-md p-1 h-fit"
+          alt=""
+        />
+      </section>
+    </div>
+    <div class="w-full xl:w-1/3">
+      <p class="mb-2 text-[#1C1C28] text-sm font-medium">{{ "popup.source" | translate }}</p>
+      <p-dropdown [options]="sourceData">
+        <ng-template let-source pTemplate="item">
+          <div class="flex gap-x-2">
+            <img [src]="source.icon" [alt]="source.name" class="source-icon" />
+            <span class="mb-2 text-[#1C1C28] text-sm font-medium">{{ source.label }}</span>
+          </div>
+        </ng-template>
+      </p-dropdown>
+    </div>
+    <div class="w-full xl:w-1/3">
+      <p class="mb-2 text-[#1C1C28] text-sm font-medium">{{ "popup.project" | translate }}</p>
+      <p-dropdown [options]="projectData">
+        <ng-template class="text-[#83899F] text-xs" let-city pTemplate="item">
+          <div class="flex gap-x-2">
+            <img [src]="city.icon" [alt]="city.name" class="city-icon" />
+            <span class="text-[#83899F] text-xs">{{ city.label }}</span>
+          </div>
+        </ng-template>
+      </p-dropdown>
+    </div>
+  </section>
+  <section>
+    <p class="mb-2 text-[#1C1C28] text-sm font-medium">{{ "popup.tags" | translate }}</p>
+    <p-chips [(ngModel)]="chipsValues"></p-chips>
+  </section>
+  <section
+    class="bg-white items-center gap-x-6 border border-[#83899F4D] flex justify-between rounded-lg mt-2"
+  >
+    <div class="w-full">
+      <section>
+        <section
+          class="bg-white items-center gap-x-6 p-3 border border-[#83899F4D] flex justify-start rounded-lg"
+        >
+          <img
+            src="assets/icons/Vector.png"
+            class="bg-white rounded-md p-1 h-fit"
+            alt=""
+          />
+          <p class="text-[#1C1C28] text-sm font-medium">{{ "popup.products" | translate }}</p>
+          <p
+            class="bg-[#FAFAFA] text-xs rounded-md w-fit p-2 text-center h-fit"
+          >
+            00
+          </p>
+        </section>
+        <section class="xl:flex xl:justify-between gap-x-6 p-6 items-center">
+          <div class="flex gap-x-3 items-center">
+            <img
+              src="assets/icons/screenshoot.png"
+              class="bg-white rounded-md w-1/5 p-1 h-fit"
+              alt=""
+            />
+            <article>
+              <p>{{ "popup.noProducts" | translate }}</p>
+              <p>{{ "popup.productsParagraph" | translate }}</p>
+            </article>
+          </div>
+          <div
+            class="items-center flex bg-[#0771DE] hover:bg-blue-800 xl:my-0 my-3 float-end xl:float-none w-fit rounded-lg text-white"
+          >
+            <span class="pi pi-plus-circle p-2"></span>
+            <button class="p-2">
+              {{ "popup.addProduct" | translate }}
+            </button>
+          </div>
+        </section>
+      </section>
+    </div>
+  </section>
+  <section
+    class="bg-white items-center gap-x-6 p-3 border border-[#83899F4D] flex justify-between rounded-lg mt-2"
+  >
+    <p class="text-[#1C1C28] text-sm font-medium">{{ "popup.additionalInfo" | translate }}</p>
+  </section>
+</section>
+<footer class="flex justify-between w-full pb-8 px-6">
+  <button
+    class="bg-[#E0E1F4] bg-opacity-30 border border-[#E0E1F4] rounded-lg items-center flex gap-x-3 p-3"
+  >
+    <img
+      src="assets/icons/Vector3.png"
+      class="bg-white rounded-md w-1/6 p-1 h-fit"
+      alt=""
+    />
+    <span class="min-w-fit text-[#9599D8] text-sm">{{ "popup.signing" | translate }}</span>
+  </button>
+  <div class="items-center bg-[#0771DE] hover:bg-blue-800 rounded-lg text-white">
+    <button class="border-r p-3 border-r-white">
+      {{ "popup.addDeal" | translate }}
+    </button>
+    <span class="pi pi-angle-down p-3"></span>
+  </div>
+</footer>

@@ -1,0 +1,16 @@
+::ng-deep {
+  .p-dialog .p-dialog-content {
+    @apply p-0;
+  }
+}
+::ng-deep {
+  .p-dropdown .p-dropdown-label {
+    @apply text-[#1C1C28] text-sm font-medium
+  }
+}
+
+::ng-deep {
+  .p-dropdown {
+    @apply w-full items-center border border-[#83899F4D] rounded-lg gap-x-0;
+  }
+}
